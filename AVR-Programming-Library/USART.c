@@ -60,7 +60,7 @@ void readString(char myString[], uint8_t maxLength) {
   char response;
   uint8_t i;
   i = 0;
-  while (i < (maxLength)) {                   /* prevent over-runs */
+  while (i < maxLength) {                   /* prevent over-runs */
     response = receiveByte();
     transmitByte(response);                                    /* echo */
     if (response == '\r') {                     /* enter marks the end */
